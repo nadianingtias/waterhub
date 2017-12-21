@@ -62,7 +62,7 @@ public class HomeActivity extends AppCompatActivity {
         AndroidNetworking.initialize(getApplicationContext());
 
 
-        setSupportActionBar(toolbar);
+//        setSupportActionBar(toolbar);
 
         initCollapsingToolbar();
         //jika sudah pake butterknife, s=tidak perlu lagi findviewbyid

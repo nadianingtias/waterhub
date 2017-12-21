@@ -28,12 +28,11 @@ dependencies {
 
     //FAN method networking
     compile 'com.amitshekhar.android:android-networking:1.0.0'
-
     
     //retrofit2 networking
-    compile 'com.squareup.retrofit2:retrofit:2.0.2'
-    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.9.0'
     
     //butterknife
     compile 'com.jakewharton:butterknife:8.8.1'
@@ -51,5 +50,4 @@ dependencies {
     compile 'com.android.support:design:26.+'
 
     testCompile 'junit:junit:4.12'
-
 }

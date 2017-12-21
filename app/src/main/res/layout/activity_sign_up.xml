@@ -1,143 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/bg_satu_signup"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:src="@drawable/bg_satu_signup" />
+
         <ImageView
-            android:layout_marginRight="200dp"
-            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
             android:layout_gravity="bottom"
-            android:src="@drawable/ic_logo_white"
-            android:layout_width="match_parent"
-            android:layout_height="40dp" />
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="200dp"
+            android:src="@drawable/ic_logo_white" />
+
         <ScrollView
-            android:layout_gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:padding="35dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/white_layout_signin"
-                android:elevation="20dp">
+                android:elevation="20dp"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:paddingTop="10dp">
+
                 <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
                     android:gravity="center"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="24dp"
                     android:text="SIGN UP"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                //username field
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24dp" />
+                //email field
+
                 <LinearLayout
-                    android:layout_marginBottom="20dp"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
                     <ImageView
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_person_outline_primary"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_mail_outline_primary" />
+
                     <android.support.design.widget.TextInputEditText
-                        android:id="@+id/tv_signup_username"
-                        android:gravity="end"
-                        android:hint="Username"
-                        android:pointerIcon="text"
-                        android:shadowColor="@color/colorPrimary"
+                        android:id="@+id/et_signup_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColorHighlight="@color/colorPrimary"
                         android:layout_gravity="center_vertical"
-                        android:textColorHint="@color/colorPrimaryDark"
-                        android:textSize="16dp" />
-                </LinearLayout>
-                //email field
-                <LinearLayout
-                    android:layout_marginBottom="20dp"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_mail_outline_primary"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <android.support.design.widget.TextInputEditText
-                        android:id="@+id/tv_signup_email"
                         android:gravity="end"
                         android:hint="Email"
                         android:pointerIcon="text"
                         android:shadowColor="@color/colorPrimary"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="16dp" />
+                </LinearLayout>
+                //firstname field
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_person_outline_primary" />
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_signup_firstname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColorHighlight="@color/colorPrimary"
                         android:layout_gravity="center_vertical"
+                        android:gravity="end"
+                        android:hint="First Name"
+                        android:pointerIcon="text"
+                        android:shadowColor="@color/colorPrimary"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="16dp" />
+                </LinearLayout>
+                //firstname field
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_person_outline_primary" />
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_signup_lastname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="end"
+                        android:hint="Last Name"
+                        android:pointerIcon="text"
+                        android:shadowColor="@color/colorPrimary"
+                        android:textColorHighlight="@color/colorPrimary"
                         android:textColorHint="@color/colorPrimaryDark"
                         android:textSize="16dp" />
                 </LinearLayout>
 
+
                 //phone number field
+
                 <LinearLayout
-                    android:layout_marginBottom="20dp"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
                     <ImageView
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_smartphone_primary"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_smartphone_primary" />
+
                     <android.support.design.widget.TextInputEditText
-                        android:id="@+id/tv_signup_phonenumber"
+                        android:id="@+id/et_signup_phonenumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:gravity="end"
                         android:hint="Phone Number"
                         android:pointerIcon="text"
                         android:shadowColor="@color/colorPrimary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:textColorHighlight="@color/colorPrimary"
-                        android:layout_gravity="center_vertical"
                         android:textColorHint="@color/colorPrimaryDark"
                         android:textSize="16dp" />
                 </LinearLayout>
 
                 //password field
+
                 <LinearLayout
-                    android:layout_marginBottom="10dp"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
                     <ImageView
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_lock_outline_primary"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_lock_outline_primary" />
+
                     <android.support.design.widget.TextInputEditText
-                        android:id="@+id/tv_signup_password"
+                        android:id="@+id/et_signup_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:gravity="end"
                         android:hint="Password"
                         android:pointerIcon="text"
                         android:shadowColor="@color/colorPrimary"
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:textColorHighlight="@color/colorPrimary"
                         android:textColorHint="@color/colorPrimaryDark"
                         android:textSize="16dp" />
@@ -146,39 +193,44 @@
                 </LinearLayout>
 
                 <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:padding="3dp"
-                    android:gravity="center"
-                    android:textSize="10dp"
-                    android:textColor="@color/colorPrimaryDark"
                     android:text="Sign up as"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="10dp" />
+
                 <android.support.v7.widget.AppCompatButton
-                    android:padding="10dp"
-                    android:gravity="center"
-                    android:layout_marginBottom="10dp"
                     android:id="@+id/but_signup_user"
-                    android:textSize="14dp"
-                    android:textColor="@color/colorWhite"
-                    android:text="USER"
-                    android:elevation="20dp"
-                    android:background="@drawable/bg_but_primary_dark"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <android.support.v7.widget.AppCompatButton
-                    android:padding="10dp"
-                    android:gravity="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:id="@+id/but_signup_seller"
-                    android:textSize="14dp"
-                    android:textColor="@color/colorWhite"
-                    android:text="SELLER"
+                    android:background="@drawable/bg_but_primary_dark"
                     android:elevation="20dp"
-                    android:background="@drawable/bg_but_accent"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="USER"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14dp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/but_signup_seller"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_but_accent"
+                    android:elevation="20dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="SELLER"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14dp" />
+
             </LinearLayout>
+
         </ScrollView>
+
     </FrameLayout>
 
 </LinearLayout>
