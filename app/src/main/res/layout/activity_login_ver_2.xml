@@ -1,137 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ImageView
-            android:scaleY="1.7"
-            android:src="@drawable/bg_bg_tiga_signin"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:scaleY="2"
+            android:src="@drawable/bg_bg_tiga_signin" />
+
         <ImageView
-            android:layout_marginRight="200dp"
-            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
             android:layout_gravity="bottom"
-            android:src="@drawable/ic_logo_white"
-            android:layout_width="match_parent"
-            android:layout_height="40dp" />
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="200dp"
+            android:src="@drawable/ic_logo_white" />
+
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="80dp"
-            android:padding="35dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginBottom="80dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/white_layout_signin"
-            android:elevation="20dp">
+            android:elevation="20dp"
+            android:orientation="vertical"
+            android:padding="35dp">
+
             <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
                 android:gravity="center"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="24dp"
                 android:text="SIGN IN"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24dp" />
+
             <LinearLayout
-                android:layout_marginBottom="40dp"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:orientation="horizontal">
+
                 <ImageView
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_person_outline_primary"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_person_outline_primary" />
+
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/et_signin_username"
-                    android:gravity="end"
-                    android:hint="Username"
-                    android:pointerIcon="text"
-                    android:shadowColor="@color/colorPrimary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHighlight="@color/colorPrimary"
                     android:layout_gravity="center_vertical"
+                    android:gravity="end"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:shadowColor="@color/colorPrimary"
+                    android:textColorHighlight="@color/colorPrimary"
                     android:textColorHint="@color/colorPrimaryDark"
                     android:textSize="16dp" />
 
 
             </LinearLayout>
+
             <LinearLayout
-                android:layout_marginBottom="40dp"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:orientation="horizontal">
+
                 <ImageView
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_lock_outline_primary"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_lock_outline_primary" />
+
                 <android.support.design.widget.TextInputEditText
-                    android:inputType="textPassword"
                     android:id="@+id/et_signin_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:gravity="end"
                     android:hint="Password"
-                    android:pointerIcon="text"
+                    android:inputType="textPassword"
                     android:shadowColor="@color/colorPrimary"
-                    android:layout_gravity="center_vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:textColorHighlight="@color/colorPrimary"
                     android:textColorHint="@color/colorPrimaryDark"
                     android:textSize="16dp" />
 
 
             </LinearLayout>
+
             <Button
                 android:id="@+id/but_signin"
-                android:gravity="center"
-                android:elevation="20dp"
-                android:background="@drawable/bg_but_primary_dark"
-                android:padding="10dp"
-                android:textSize="16dp"
-                android:textColor="@color/colorWhite"
-                android:text="submit"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_but_primary_dark"
+                android:elevation="20dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="submit"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
+
             <LinearLayout
-                android:layout_marginTop="7dp"
-                android:layout_gravity="center"
-                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
                 <TextView
-                    android:text="Don't have account?"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="Don't have account?" />
+
                 <TextView
                     android:id="@+id/tv_link_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:textColor="@color/colorAccent"
-                    android:layout_marginLeft="10dp"
                     android:text="register"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:textColor="@color/colorAccent" />
             </LinearLayout>
 
         </LinearLayout>
+
         <android.support.v4.widget.ContentLoadingProgressBar
             android:id="@+id/pb_signin_loading"
-            android:layout_margin="200dp"
-            android:layout_gravity="center_horizontal"
             android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="200dp" />
     </FrameLayout>
-
 
 
 </LinearLayout>

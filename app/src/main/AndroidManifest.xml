@@ -6,7 +6,6 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    //networking requirement
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -16,27 +15,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"
+            />
+
         <activity android:name=".MainActivity" />
         <activity
             android:name=".Main2Activity"
             android:theme="@style/AppThemeNoBar" />
         <activity
             android:name=".LoginActivity"
+            android:theme="@style/AppThemeNoBar" />
+        <activity
+            android:name=".SignUpActivity"
+            android:theme="@style/AppThemeNoBar" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".MainHomeActivity"
             android:theme="@style/AppThemeNoBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".SignUpActivity"
-            android:theme="@style/AppThemeNoBar" />
-        <activity android:name=".HomeActivity">
-        </activity>
-        <activity android:name=".MainHomeActivity"
-            android:theme="@style/AppThemeNoBar">
+
+        <activity android:name=".MapsActivity">
 
         </activity>
     </application>

@@ -8,7 +8,7 @@ import android.content.Context;
 
 public class UtilsApi {
 
-    public static final String BASE_URL_API = "http://192.168.100.12:8080/api/";
+    public static final String BASE_URL_API = "http://192.168.43.210:8080/api/";
 
     // Mendeklarasikan Interface BaseApiService
     public static BaseApiService getAPIService(Context context){

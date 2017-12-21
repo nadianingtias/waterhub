@@ -3,7 +3,8 @@ package com.waterhub.waterhub.SessionManager;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.util.Log;
+
+import com.waterhub.waterhub.model.User;
 
 
 /**
@@ -21,10 +22,10 @@ public class SessionManager {
     Context _context;
 
     // Shared pref mode
-    int PRIVATE_MODE = 0;
+    private int PRIVATE_MODE = 0;
 
     // Shared preferences file name
-    private static final String PREF_NAME = "khoiron";
+    private static final String PREF_NAME = "nama_pref";
 
     private static final String KEY_IS_LOGGEDIN = "isLoggedIn";
 
@@ -34,7 +35,6 @@ public class SessionManager {
 
         //preferences editor
         editor = pref.edit();
-
     }
 
     public void saveData(String message){
@@ -43,9 +43,30 @@ public class SessionManager {
     }
 
     public String getData(){
-        String result;
-            result = pref.getString("message","");
-        return result;
+        return pref.getString("message","");
+    }
+
+    public void saveUser(User user) {
+        saveUser(user.getEmail());
+    }
+
+    public void saveUser(String email) {
+        editor.putString("user", email);
+        editor.commit();
+    }
+
+    public String getUserEmail() {
+        return pref.getString("user", null);
+    }
+
+    public Boolean isLogin() {
+        String result = getUserEmail();
+        return result != null;
+    }
+
+    public void deleteUser() {
+        editor.remove("user");
+        editor.commit();
     }
 
     //method untuk menyimpan data

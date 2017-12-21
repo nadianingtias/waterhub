@@ -34,7 +34,7 @@
                 android:layout_marginBottom="15dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="56dp"
                 android:background="@drawable/white_layout_signin"
                 android:elevation="20dp"
                 android:orientation="vertical"
@@ -50,7 +50,8 @@
                     android:gravity="center"
                     android:text="SIGN UP"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="24dp" />
+                    android:textSize="24sp" />
+
                 //email field
 
                 <LinearLayout
@@ -72,12 +73,13 @@
                         android:layout_gravity="center_vertical"
                         android:gravity="end"
                         android:hint="Email"
-                        android:pointerIcon="text"
+                        android:inputType="textEmailAddress"
                         android:shadowColor="@color/colorPrimary"
                         android:textColorHighlight="@color/colorPrimary"
                         android:textColorHint="@color/colorPrimaryDark"
                         android:textSize="16dp" />
                 </LinearLayout>
+
                 //firstname field
 
                 <LinearLayout
@@ -99,7 +101,7 @@
                         android:layout_gravity="center_vertical"
                         android:gravity="end"
                         android:hint="First Name"
-                        android:pointerIcon="text"
+                        android:inputType="textPersonName|textCapWords"
                         android:shadowColor="@color/colorPrimary"
                         android:textColorHighlight="@color/colorPrimary"
                         android:textColorHint="@color/colorPrimaryDark"
@@ -126,13 +128,12 @@
                         android:layout_gravity="center_vertical"
                         android:gravity="end"
                         android:hint="Last Name"
-                        android:pointerIcon="text"
+                        android:inputType="textPersonName|textCapWords"
                         android:shadowColor="@color/colorPrimary"
                         android:textColorHighlight="@color/colorPrimary"
                         android:textColorHint="@color/colorPrimaryDark"
                         android:textSize="16dp" />
                 </LinearLayout>
-
 
                 //phone number field
 
@@ -155,7 +156,82 @@
                         android:layout_gravity="center_vertical"
                         android:gravity="end"
                         android:hint="Phone Number"
-                        android:pointerIcon="text"
+                        android:inputType="phone"
+                        android:shadowColor="@color/colorPrimary"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_signup_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="end"
+                        android:hint="Country"
+                        android:inputType="textCapWords"
+                        android:shadowColor="@color/colorPrimary"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_signup_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="end"
+                        android:hint="City"
+                        android:inputType="textCapWords"
+                        android:shadowColor="@color/colorPrimary"
+                        android:textColorHighlight="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/et_signup_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="end"
+                        android:hint="Address"
+                        android:inputType="textCapWords|textMultiLine"
                         android:shadowColor="@color/colorPrimary"
                         android:textColorHighlight="@color/colorPrimary"
                         android:textColorHint="@color/colorPrimaryDark"
@@ -183,7 +259,7 @@
                         android:layout_gravity="center_vertical"
                         android:gravity="end"
                         android:hint="Password"
-                        android:pointerIcon="text"
+                        android:inputType="textPassword"
                         android:shadowColor="@color/colorPrimary"
                         android:textColorHighlight="@color/colorPrimary"
                         android:textColorHint="@color/colorPrimaryDark"

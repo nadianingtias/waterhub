@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.waterhub.waterhub.APIhelper.BaseApiService;
 import com.waterhub.waterhub.APIhelper.UtilsApi;
+import com.waterhub.waterhub.SessionManager.SessionManager;
 import com.waterhub.waterhub.model.Login;
 import com.waterhub.waterhub.model.MyResponse;
 import com.waterhub.waterhub.model.User;
@@ -56,6 +57,7 @@ public class LoginActivity extends AppCompatActivity {
                 requestLogin();
             }
         });
+
         linkToRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,8 +87,13 @@ public class LoginActivity extends AppCompatActivity {
                     User user = myResponse.getData();
 
                     if (user != null) {
-                        // TODO simpan user di session
-                        // TODO pindah halaman
+                        SessionManager sessionManager = new SessionManager(mContext);
+                        sessionManager.saveUser(user);
+
+                        Intent intent = new Intent(mContext, MainHomeActivity.class);
+                        startActivity(intent);
+
+                        finish();
                     }
 
                     Toast.makeText(mContext, message, Toast.LENGTH_LONG).show();
@@ -97,7 +104,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<MyResponse<User>> call, Throwable t) {
-                Toast.makeText(LoginActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(mContext, t.getMessage(), Toast.LENGTH_LONG).show();
                 signinLoading.dismiss();
             }
         });

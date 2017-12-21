@@ -14,15 +14,15 @@ public class User implements Serializable {
     private String password; //
     private String firstName; //
     private String lastName; //
-    private Date birthDate;
+    private String birthDate;
     private String phone; //
-    private String country;
-    private String city;
-    private String address;
+    private String country; //
+    private String city; //
+    private String address; //
     private Double latitude;
     private Double longitude;
     private String picture;
-    private Date createdAt;
+    private String createdAt;
     private List<Role> roles = new ArrayList<>();
     private List<Store> stores = new ArrayList<>();
 
@@ -78,11 +78,11 @@ public class User implements Serializable {
         this.lastName = lastName;
     }
 
-    public Date getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -142,11 +142,11 @@ public class User implements Serializable {
         this.picture = picture;
     }
 
-    public Date getCreatedAt() {
+    public String getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
+    public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
 

@@ -18,11 +18,11 @@
             android:layout_height="80dp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/item_store_picture"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/bg_banner" />
+            <!--<ImageView-->
+                <!--android:id="@+id/item_store_picture"-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="80dp"-->
+                <!--android:src="@drawable/bg_banner" />-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -42,7 +42,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:layout_toRightOf="@id/item_store_picture"
                         android:paddingLeft="16dp"
                         android:text="Toko Arrafz"
                         android:textColor="@color/colorPrimaryDark"
@@ -52,7 +51,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
-                        android:layout_toRightOf="@id/item_store_picture"
                         android:paddingLeft="16dp"
                         android:text="5"
                         android:textColor="@color/colorPrimaryDark"
